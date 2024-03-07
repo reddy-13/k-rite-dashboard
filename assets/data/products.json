@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "brand": "Wix",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Create a stunning website with Wix's easy-to-use platform.",
+    "members": ["John Doe", "Jane Smith", "Goutham reddy", "sumit", "arun"],
+    "category": "Technology",
+    "tags": ["Website", "Hosting"],
+    "nextMeeting": "In 1 hour"
+  },
+  {
+    "id": 2,
+    "brand": "Shopify",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Build your online store with Shopify's powerful e-commerce solutions.",
+    "members": ["Alice Johnson", "Bob Anderson"],
+    "category": "E-commerce",
+    "tags": ["Online Store", "Business"],
+    "nextMeeting": "In 2 hours"
+  },
+  {
+    "id": 3,
+    "brand": "Disney",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Experience the magic of Disney's world-class entertainment and storytelling.",
+    "members": ["Emily White", "Chris Brown"],
+    "category": "Entertainment",
+    "tags": ["Movies", "Magic"],
+    "nextMeeting": "In 3 hours"
+  },
+  {
+    "id": 4,
+    "brand": "PayPal",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Secure and convenient online payments with PayPal's trusted platform.",
+    "members": ["Michael Johnson", "Susan Davis"],
+    "category": "Finance",
+    "tags": ["Payments", "Transactions"],
+    "nextMeeting": "In 4 hours"
+  },
+  {
+    "id": 5,
+    "brand": "Mailchimp",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Elevate your marketing with Mailchimp's email and campaign tools.",
+    "members": ["Mark Adams", "Laura Wilson"],
+    "category": "Marketing",
+    "tags": ["Emails", "Campaigns"],
+    "nextMeeting": "In 5 hours"
+  },
+  {
+    "id": 6,
+    "brand": "Google",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Innovative technology solutions from the world's leading search engine.",
+    "members": ["Alex Johnson", "Sophia Brown"],
+    "category": "Technology",
+    "tags": ["Search", "Innovation"],
+    "nextMeeting": "In 6 hours"
+  },
+  {
+    "id": 7,
+    "brand": "Microsoft",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Empowering individuals and organizations through cutting-edge software.",
+    "members": ["David Miller", "Jennifer Lee"],
+    "category": "Technology",
+    "tags": ["Software", "Productivity"],
+    "nextMeeting": "In 7 hours"
+  },
+  {
+    "id": 8,
+    "brand": "Amazon",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Explore the world's largest online marketplace with Amazon's services.",
+    "members": ["Ryan Taylor", "Megan Johnson"],
+    "category": "E-commerce",
+    "tags": ["Shopping", "Delivery"],
+    "nextMeeting": "In 8 hours"
+  },
+  {
+    "id": 9,
+    "brand": "Tesla",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Revolutionizing the automotive industry with electric vehicles and clean energy.",
+    "members": ["Elon Musk", "Anna Davis"],
+    "category": "Automotive",
+    "tags": ["Electric Cars", "Sustainability"],
+    "nextMeeting": "In 9 hours"
+  },
+  {
+    "id": 10,
+    "brand": "Netflix",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Enjoy a wide range of movies, TV shows, and original content on Netflix.",
+    "members": ["Chris Evans", "Emma Watson"],
+    "category": "Entertainment",
+    "tags": ["Streaming", "Movies"],
+    "nextMeeting": "In 10 hours"
+  },
+  {
+    "id": 11,
+    "brand": "Adobe",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Unlock your creativity with Adobe's suite of design and multimedia tools.",
+    "members": ["Daniel Johnson", "Grace Brown"],
+    "category": "Design",
+    "tags": ["Creative Cloud", "Design Tools"],
+    "nextMeeting": "In 11 hours"
+  },
+  {
+    "id": 12,
+    "brand": "IBM",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Leading the way in technology and business solutions with IBM.",
+    "members": ["Kevin White", "Olivia Davis"],
+    "category": "Technology",
+    "tags": ["Innovation", "Business"],
+    "nextMeeting": "In 12 hours"
+  },
+  {
+    "id": 13,
+    "brand": "Coca-Cola",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Refreshing the world with Coca-Cola's iconic beverages.",
+    "members": ["Thomas Johnson", "Sophie Brown"],
+    "category": "Beverages",
+    "tags": ["Soft Drinks", "Refreshment"],
+    "nextMeeting": "In 13 hours"
+  },
+  {
+    "id": 14,
+    "brand": "Nike",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Empowering athletes and enthusiasts with high-performance sportswear.",
+    "members": ["Michael Jordan", "Serena Williams"],
+    "category": "Sportswear",
+    "tags": ["Athletics", "Fashion"],
+    "nextMeeting": "In 14 hours"
+  },
+  {
+    "id": 15,
+    "brand": "Twitter",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Connect with the world through Twitter's real-time social media platform.",
+    "members": ["Jack Dorsey", "Emma Stone"],
+    "category": "Social Media",
+    "tags": ["Microblogging", "Networking"],
+    "nextMeeting": "In 15 hours"
+  },
+  {
+    "id": 16,
+    "brand": "Samsung",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Innovative electronics and technology solutions from Samsung.",
+    "members": ["Brian Miller", "Ava Davis"],
+    "category": "Technology",
+    "tags": ["Electronics", "Smart Devices"],
+    "nextMeeting": "In 16 hours"
+  },
+  {
+    "id": 17,
+    "brand": "McDonald's",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Delicious fast food and iconic meals at McDonald's.",
+    "members": ["Ronald McDonald", "Lily Brown"],
+    "category": "Food",
+    "tags": ["Fast Food", "Burgers"],
+    "nextMeeting": "In 17 hours"
+  },
+  {
+    "id": 18,
+    "brand": "Uber",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Ride-sharing and transportation services with Uber.",
+    "members": ["Travis Kalanick", "Sophia Davis"],
+    "category": "Transportation",
+    "tags": ["Rides", "Convenience"],
+    "nextMeeting": "In 18 hours"
+  },
+  {
+    "id": 19,
+    "brand": "LinkedIn",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Connect and network professionally on LinkedIn's business-oriented platform.",
+    "members": ["Jeff Weiner", "Natalie Johnson"],
+    "category": "Social Media",
+    "tags": ["Professional Networking", "Career"],
+    "nextMeeting": "In 19 hours"
+  },
+  {
+    "id": 20,
+    "brand": "Ford",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Driving innovation in the automotive industry with Ford vehicles.",
+    "members": ["Henry Ford", "Ella Brown"],
+    "category": "Automotive",
+    "tags": ["Cars", "Innovation"],
+    "nextMeeting": "In 20 hours"
+  },
+  {
+    "id": 21,
+    "brand": "Sony",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Entertainment and technology solutions from Sony.",
+    "members": ["John Sony", "Amy Davis"],
+    "category": "Technology",
+    "tags": ["Electronics", "Entertainment"],
+    "nextMeeting": "In 21 hours"
+  },
+  {
+    "id": 22,
+    "brand": "Puma",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Sportswear and athletic footwear by Puma.",
+    "members": ["Usain Bolt", "Serena Johnson"],
+    "category": "Sportswear",
+    "tags": ["Athletics", "Fashion"],
+    "nextMeeting": "In 22 hours"
+  },
+  {
+    "id": 23,
+    "brand": "Spotify",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Enjoy your favorite music and podcasts on Spotify's streaming platform.",
+    "members": ["Daniel Ek", "Olivia Smith"],
+    "category": "Entertainment",
+    "tags": ["Music", "Podcasts"],
+    "nextMeeting": "In 23 hours"
+  },
+  {
+    "id": 24,
+    "brand": "Lululemon",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Elevate your active lifestyle with high-quality athletic apparel from Lululemon.",
+    "members": ["James White", "Ella Johnson"],
+    "category": "Athletic Apparel",
+    "tags": ["Yoga", "Fitness"],
+    "nextMeeting": "In 24 hours"
+  },
+  {
+    "id": 25,
+    "brand": "NASA",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Exploring space and advancing scientific discovery with NASA.",
+    "members": ["Neil Armstrong", "Samantha Brown"],
+    "category": "Space Exploration",
+    "tags": ["Science", "Discovery"],
+    "nextMeeting": "In 25 hours"
+  },
+  {
+    "id": 26,
+    "brand": "Tesla",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Revolutionizing the automotive industry with electric vehicles and clean energy.",
+    "members": ["Elon Musk", "Anna Davis"],
+    "category": "Automotive",
+    "tags": ["Electric Cars", "Sustainability"],
+    "nextMeeting": "In 26 hours"
+  },
+  {
+    "id": 27,
+    "brand": "Adobe",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Unlock your creativity with Adobe's suite of design and multimedia tools.",
+    "members": ["Daniel Johnson", "Grace Brown"],
+    "category": "Design",
+    "tags": ["Creative Cloud", "Design Tools"],
+    "nextMeeting": "In 27 hours"
+  },
+  {
+    "id": 28,
+    "brand": "IBM",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Leading the way in technology and business solutions with IBM.",
+    "members": ["Kevin White", "Olivia Davis"],
+    "category": "Technology",
+    "tags": ["Innovation", "Business"],
+    "nextMeeting": "In 28 hours"
+  },
+  {
+    "id": 29,
+    "brand": "Coca-Cola",
+    "logoLink": "https://avatar.iran.liara.run/public/29",
+    "description": "Refreshing the world with Coca-Cola's iconic beverages.",
+    "members": ["Thomas Johnson", "Sophie Brown"],
+    "category": "Beverages",
+    "tags": ["Soft Drinks", "Refreshment"],
+    "nextMeeting": "In 29 hours"
+  }
+]

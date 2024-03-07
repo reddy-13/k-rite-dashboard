@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="./src/output.css" rel="stylesheet" />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Modern Product Page</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.6/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="font-sans bg-white">
+    <div x-data class="flex min-h-screen	">
+      <!-- Sidebar -->
+      <aside
+        x-data
+        x-show="$store.sidebarOpen = !$store.sidebarOpen"
+        class="w-64 flex flex-col justify-between bg-white border rounded-md ml-5 border-gray-300 p-4 mt-8 space-y-2 transition-all duration-300 ease-in-out"
+      >
+        <!-- Company Header -->
+        <div>
+          <div class="flex items-center p-3">
+            <img
+              src="./assets/images/logo.png"
+              alt="Company Logo"
+              class="w-8 h-8 rounded-md mr-2"
+            />
+            <div>
+              <div class="text-xs">INC</div>
+              <div class="font-semibold text-sm">innovativeHUB</div>
+            </div>
+            <div class="ml-auto">
+              <img
+                src="https://avatar.iran.liara.run/public/44"
+                alt="User Avatar"
+                class="w-8 h-8 rounded-full"
+              />
+            </div>
+          </div>
+
+          <!-- Page Links -->
+          <nav class="space-y-2">
+           <div class="border border-gray-200 rounded-md">
+            <a
+            href="#"
+            class="block py-2 px-4 rounded flex items-center justify-between hover:bg-gray-200"
+          >
+            <span class="text-xs font-semibold"><i class="fa-solid fa-rocket mr-2 "></i> Design Team</span>
+            <span class="p-1 bg-gray-200 text-xs rounded-md"><i class="fa-brands fa-mixer"></i> + 1</span>
+          </a>
+          <a
+            href="#"
+            class="block py-2 px-4 rounded flex items-center justify-between hover:bg-gray-200"
+          >
+            <span class="text-xs font-semibold"><i class="fas fa-bullhorn mr-2"></i> Marketing Team</span>
+            <span class="p-1 bg-gray-200 text-xs rounded-md"><i class="fa-brands fa-mixer"></i> + 2</span>
+          </a>
+          <a
+            href="#"
+            class="block py-2 px-4 rounded flex items-center justify-between hover:bg-gray-200 border-b border-gray-200"
+          >
+            <span class="text-xs font-semibold"><i class="fas fa-code mr-2"></i> Development Team</span>
+            <span class="p-1 bg-gray-200 text-xs rounded-md"><i class="fa-brands fa-mixer"></i> + 3</span>
+          </a>
+          <a
+            href="#"
+            class="block py-2 px-4 rounded flex items-center justify-between hover:bg-gray-200"
+          >
+            <span class="text-xs font-semibold text-gray-500"><i class="fa-regular fa-square-plus mr-2 "></i> Create a Team</span>
+      
+          </a>
+           </div>
+
+            <div
+              class="py-2 px-4 text-xs uppercase font-semibold text-gray-500 flex justify-between"
+            >
+              Folders
+              <span><i class="fa-solid fa-plus text-gray-500"></i></span>
+            </div>
+            <div class="px-4 flex w-full">
+              <!--Products Collapsible Folder Link with folded icon -->
+              <div x-data="{ open: true }" class="w-full">
+                <button
+                  @click="open = !open"
+                  :class="open ?  'bg-gray-200 rounded' : '' "
+                  class="flex text-xs items-center w-full duration-300 -pl-4 py-1 text-black rounded-md hover:bg-gray-200 px-2 hover:text-gray-500 mb-2"
+                >
+                  <i class="fa-regular fa-folder mr-2  justify-between p-1"></i>
+                  Products <span class="ml-auto"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div
+                  x-show="open"
+                  x-cloak
+                  class="flex flex-col border-l border-b ml-4 rounded-bl-lg"
+                >
+                  <!-- Sublist of links inside the Collapsible Folder Section -->
+                  <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                    >Roadmap</a
+                  >
+                  <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                    >Feedback</a
+                  >
+                  <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                    >Perfomance</a
+                  >
+                  <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                    >Team</a
+                  >
+                  <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-4"
+                    >Analytics</a
+                  >
+                </div>
+                <a
+                x-show="open"
+                x-cloak
+                  href="#"
+                  class="ml-6 text-gray-500 text-xs z-10 bg-white pr-10 hover:text-gray-400 -mt-3 absolute"
+                  ><span class="pr-10 block"><i class="fa-regular fa-square-plus mr-1 px-2 bg-white"></i>Add new sub</a
+                >
+              </div>
+              
+            </div>
+            <div class="px-4 flex w-full ">
+                <!--Sales Collapsible Folder Link with folded icon -->
+                <div x-data="{ open: false }" class="w-full">
+                  <button
+                    @click="open = !open"
+                    :class="open ?  'bg-gray-200 rounded' : '' "
+                    class="flex items-center text-xs w-full duration-300 -pl-4 py-1 text-black rounded-md hover:bg-gray-200 px-2 hover:text-gray-500 mb-2"
+                  >
+                    <i class="fa-regular fa-folder mr-2  justify-between p-1"></i>
+                    Sales <span class="ml-auto"><i class="fa-solid fa-chevron-down"></i></span>
+                  </button>
+                  <div
+                    x-show="open"
+                    x-cloak
+                    class="flex flex-col border-l border-b ml-4 rounded-bl-lg"
+                  >
+                    <!-- Sublist of links inside the Collapsible Folder Section -->
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Roadmap</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Feedback</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Perfomance</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Team</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-4"
+                      >Analytics</a
+                    >
+                  </div>
+                  <a
+                  x-show="open"
+                  x-cloak
+                    href="#"
+                    class="ml-6 text-gray-500 text-xs z-10 bg-white pr-10 hover:text-gray-400 -mt-3 absolute"
+                    ><span class="pr-10 block"><i class="fa-regular fa-square-plus mr-1 px-2 bg-white"></i>Add new sub</a
+                  >
+                </div>
+                
+              </div>
+              <div class="px-4 flex w-full">
+                <!--Design Collapsible Folder Link with folded icon -->
+                <div x-data="{ open: false }" class="w-full">
+                  <button
+                    @click="open = !open"
+                    :class="open ?  'bg-gray-200 rounded' : '' "
+                    class="flex items-center text-xs w-full duration-300 -pl-4 py-1 text-black rounded-md hover:bg-gray-200 px-2 hover:text-gray-500 mb-2"
+                  >
+                    <i class="fa-regular fa-folder mr-2  justify-between p-1"></i>
+                    Design <span class="ml-auto"><i class="fa-solid fa-chevron-down"></i></span>
+                  </button>
+                  <div
+                    x-show="open"
+                    x-cloak
+                    class="flex flex-col border-l border-b ml-4 rounded-bl-lg"
+                  >
+                    <!-- Sublist of links inside the Collapsible Folder Section -->
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Roadmap</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Feedback</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Perfomance</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Team</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-4"
+                      >Analytics</a
+                    >
+                  </div>
+                  <a
+                  x-show="open"
+                  x-cloak
+                    href="#"
+                    class="ml-6 text-gray-500 text-xs z-10 bg-white pr-10 hover:text-gray-400 -mt-3 absolute"
+                    ><span class="pr-10 block"><i class="fa-regular fa-square-plus mr-1 px-2 bg-white"></i>Add new sub</a
+                  >
+                </div>
+                
+              </div>
+              <div class="px-4 flex w-full ">
+                <!--Office Collapsible Folder Link with folded icon -->
+                <div x-data="{ open: false }" class="w-full">
+                  <button
+                    @click="open = !open"
+                    :class="open ?  'bg-gray-200 rounded' : '' "
+                    class="flex items-center text-xs w-full duration-300 -pl-4 py-1 text-black rounded-md hover:bg-gray-200 px-2 hover:text-gray-500 mb-2"
+                  >
+                    <i class="fa-regular fa-folder mr-2  justify-between p-1"></i>
+                    Office
+                  </button>
+                  <div
+                    x-show="open"
+                    x-cloak
+                    class="flex flex-col border-l border-b ml-4 rounded-bl-lg"
+                  >
+                    <!-- Sublist of links inside the Collapsible Folder Section -->
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Roadmap</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Feedback</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Perfomance</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Team</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-4"
+                      >Analytics</a
+                    >
+                  </div>
+                  <a
+                  x-show="open"
+                  x-cloak
+                    href="#"
+                    class="ml-6 text-gray-500 text-xs z-10 bg-white pr-10 hover:text-gray-400 -mt-3 absolute"
+                    ><span class="pr-10 block"><i class="fa-regular fa-square-plus mr-1 px-2 bg-white"></i>Add new sub</a
+                  >
+                </div>
+                
+              </div>
+              <div class="px-4 flex w-full">
+                <!--Legal Collapsible Folder Link with folded icon -->
+                <div x-data="{ open: false }" class="w-full">
+                  <button
+                    @click="open = !open"
+                    :class="open ?  'bg-gray-200 rounded' : '' "
+                    class="flex items-center text-xs w-full duration-300 -pl-4 py-1 text-black rounded-md hover:bg-gray-200 px-2 hover:text-gray-500 mb-2"
+                  >
+                    <i class="fa-regular fa-folder mr-2  justify-between p-1"></i>
+                    Legal
+                  </button>
+                  <div
+                    x-show="open"
+                    x-cloak
+                    class="flex flex-col border-l border-b ml-4 rounded-bl-lg"
+                  >
+                    <!-- Sublist of links inside the Collapsible Folder Section -->
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Roadmap</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Feedback</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Perfomance</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-2"
+                      >Team</a
+                    >
+                    <a href="#" class="ml-6 text-black text-xs hover:text-gray-400 mb-4"
+                      >Analytics</a
+                    >
+                  </div>
+                  <a
+                  x-show="open"
+                  x-cloak
+                    href="#"
+                    class="ml-6 text-gray-500 text-xs z-10 bg-white pr-10 hover:text-gray-400 -mt-3 absolute"
+                    ><span class="pr-10 block"><i class="fa-regular fa-square-plus mr-1 px-2 bg-white"></i>Add new sub</a
+                  >
+                </div>
+                
+              </div>
+          </nav>
+        </div>
+        <div class="mt-auto">
+          <ul>
+            <li class="">
+              <a
+                href="#"
+                class="block py-2 px-2 rounded flex items-center justify-between hover:bg-gray-200"
+              >
+                <span class="text-xs">
+                  <i
+                    class="fa fa-user-plus mr-2 bg-white px-2 py-1 rounded-md"
+                  ></i>
+                  Invite teammates</span
+                >
+              </a>
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="block py-2 px-2 rounded flex items-center justify-between hover:bg-gray-200"
+              >
+                <span class="text-xs">
+                  <i
+                    class="fa-regular fa-circle-question mr-2 bg-white px-2 py-1 rounded-md"
+                  ></i>
+                  Help and First Steps</span
+                >
+                <span class="px-2 py-1 bg-gray-200 rounded-md text-xs"
+                  >0/6</span
+                >
+              </a>
+            </li>
+            <li class="">
+              <a
+                href="#"
+                class="block py-2 px-2 rounded flex items-center justify-between bg-gray-200"
+              >
+                <span class="text-xs"
+                  ><i
+                    class="fa-solid fa-question mr-2 bg-white px-2 py-1 rounded-md"
+                  ></i>
+                  days left on trail</span
+                >
+                <span
+                  ><button
+                    class="btn bg-black text-white text-xs px-2 py-1 rounded-full"
+                  >
+                    Add billing
+                  </button></span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-8 overflow-y-auto">
+        <div class="border border-gray-300 rounded-md shadow-md">
+          <!-- Navbar -->
+          <div
+            class="flex justify-between items-center mb-5 border-b border-gray-300 p-4"
+          >
+            <div class="flex items-center">
+              <button
+                x-data
+                @click="$store.sidebarOpen = $store.sidebarOpen"
+                class=" block text-gray-600 focus:outline-none"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <h1 class="ml-4 text-lg font-semibold sm:text-xl">Products</h1>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="flex items-center text-sm border rounded-md px-2 mr-2 py-1"
+              >
+                <i
+                  class="fas fa-search text-gray-500 block float-left cursor-pointer mr-2"
+                ></i>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="Search for..."
+                  className="text-base bg-transparent w-full text-white
+                focus:outline-none "
+                />
+              </div>
+              <button
+                class="text-gray-600 focus:outline-none text-sm border rounded-md px-2 py-1"
+              >
+                <i class="fa-regular fa-comments"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-600 focus:outline-none text-sm border rounded-md px-2 py-1"
+              >
+                <i class="fas fa-cog"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Filters and Buttons -->
+          <div class="flex justify-between items-center mb-4 px-5">
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center space-x-2">
+                <button
+                  class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+                >
+                  <i class="fas fa-sliders-h"></i> Filter
+                </button>
+                <button
+                  class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+                >
+                  <i class="fas fa-sort-amount-up"></i> Sort
+                </button>
+              </div>
+              <button
+                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+              >
+                <i class="fas fa-tags"></i> All Brands
+              </button>
+              <button
+                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+              >
+                <i class="fas fa-desktop"></i> Desk
+              </button>
+              <button
+                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+              >
+                <i class="fas fa-tags"></i> Tags
+              </button>
+            </div>
+            <div>
+              <span class="text-gray-600"
+                >Selected Rows:<span x-data x-text="$store.selectedRows"></span
+              ></span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <button
+                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+              >
+                <i class="fas fa-file-import"></i> Import/Export
+              </button>
+              <button
+                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
+              >
+                <i class="far fa-calendar-alt"></i> Meetings
+              </button>
+            </div>
+          </div>
+          <!-- Table -->
+          <div class="overflow-x-auto">
+            <table
+              class="w-full border-collapse border-b border-t border-gray-200"
+            >
+              <thead class="text-left font-light text-gray-500">
+                <tr>
+                  <th class="py-2 px-4 border-b">
+                    <input
+                      type="checkbox"
+                      id="selectAllCheckbox"
+                      @click="toggleSelectAllRows"
+                    />
+                  </th>
+                  <th class="py-2 px-4 border-b">Brand</th>
+                  <th class="py-2 px-4 border-b">Description</th>
+                  <th class="py-2 px-4 border-b">Members</th>
+                  <th class="py-2 px-4 border-b">Category</th>
+                  <th class="py-2 px-4 border-b">Tags</th>
+                  <th class="py-2 px-4 border-b">Next Meeting</th>
+                </tr>
+              </thead>
+              <tbody id="productTableBody"></tbody>
+            </table>
+            <!-- Pagination -->
+            <div class="mt-4 flex items-center justify-between">
+              <button
+                x-data
+                @click="$store.currentPage > 1 ? $store.currentPage-- : null"
+                class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md focus:outline-none"
+              >
+                Previous
+              </button>
+              <div class="text-gray-600">Page <span x-text="currentPage"></span></div>
+              <button
+                x-data
+                @click="$store.currentPage < Math.ceil(products.length / $store.itemsPerPage) ? $store.currentPage++ : null"
+                class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md focus:outline-none"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script> -->
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.store({
+          sidebarOpen: true,
+          selectedRows: [],
+          products : [],
+          currentPage: 1,
+          itemsPerPage: 10,
+        });
+      });
+
+      // Function to generate random dummy data for products
+      function generateDummyData() {
+        const products = [];
+        for (let i = 1; i <= 100; i++) {
+          products.push({
+            id: i,
+            brand: `Brand ${i}`,
+            description: `Description ${i}`,
+            members: [`Member ${i}`, `Member ${i + 1}`, `Member ${i + 2}`],
+            category: "Automation",
+            tags: [`Tag${i}`, `Tag${i + 1}`],
+            nextMeeting: "In 30 minutes",
+          });
+        }
+        return products;
+      }
+
+      // Function to render products in the table
+      function renderProducts(products, currentPage, itemsPerPage) {
+    const productTableBody = document.getElementById("productTableBody");
+    productTableBody.innerHTML = "";
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentPageProducts = products.slice(startIndex, endIndex);
+
+    currentPageProducts.forEach((product) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="py-2 px-4 border">
+          <input
+            type="checkbox"
+            class="form-checkbox"
+            @click="selectRow(${product.id})"
+          />
+        </td>
+        <td class="py-2 px-4 border">
+          <div class="flex items-center">
+            <img src="${product.logoLink}" alt="Brand Avatar" class="w-6 h-6 rounded-md mr-2">
+            <span class="font-bold">${product.brand}</span>
+          </div>
+        </td>
+        <td class="py-2 px-4 border">${product.description}</td>
+        <td class="py-2 px-4 border">
+          <div class="flex -space-x-4 rtl:space-x-reverse justify-center">
+            ${product.members
+              .map(
+                (member,i) =>
+                  `<img src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="${member.name}" class="w-6 h-6 border-2 border-white rounded-full dark:border-gray-800">`
+              )
+              .join("")}
+          </div>
+        </td>
+        <td class="py-2 px-4 border">
+          <span class="bg-blue-200 text-blue-800 py-1 px-2 rounded-full">${product.category}</span>
+        </td>
+        <td class="py-2 px-4 border">
+          ${product.tags
+            .map(
+              (tag) =>
+                `<span class="bg-gray-300 text-gray-600 py-1 px-2 rounded-full">#${tag}</span>`
+            )
+            .join("")}
+        </td>
+        <td class="py-2 px-4 border">
+          <span class="bg-gray-300 text-gray-600 py-1 px-2 rounded-full">${product.nextMeeting}</span>
+        </td>
+      `;
+      productTableBody.appendChild(row);
+    
+    });
+      const row2 = document.createElement("tr");
+      row2.innerHTML = `
+        <td class="py-2 px-4 border-b">
+          
+        </td>
+        <td class="py-2 px-4 border-b">
+          <div class="flex items-center">
+            <span class="font-bold">10 count</span>
+          </div>
+        </td>
+        <td class="py-2 px-4 border">+ add calculation</td>
+        <td class="py-2 px-4 border">+ add calculation</td>
+        <td class="py-2 px-4 border">+ add calculation</td>
+        <td class="py-2 px-4 border">+ add calculation</td>
+        <td class="py-2 px-4 border">
+        </td>
+      `;
+      productTableBody.appendChild(row2);
+  }
+
+      // Alpine.js function to handle selected rows
+      function selectRow(id) {
+        const selectedRows = document.querySelectorAll(
+          ".form-checkbox:checked"
+        );
+        const selectedRowIds = Array.from(selectedRows).map((checkbox) =>
+          Number(checkbox.dataset.rowId)
+        );
+        if (selectedRowIds.includes(id)) {
+          selectedRowIds.splice(selectedRowIds.indexOf(id), 1);
+        } else {
+          selectedRowIds.push(id);
+        }
+        // Update the selectedRows array
+        Alpine.store("selectedRows", selectedRowIds.length);
+      }
+
+      // Alpine.js function to select all rows
+      function toggleSelectAllRows() {
+        const checkboxes = document.querySelectorAll(".form-checkbox");
+        const selectAllCheckbox = document.getElementById("selectAllCheckbox");
+        const isSelectAllChecked = selectAllCheckbox.checked;
+
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = isSelectAllChecked; // Toggle the state of each checkbox
+        });
+
+        const selectedRowIds = !isSelectAllChecked
+          ? []
+          : Array.from(checkboxes).map((checkbox, index) => index + 1);
+        // Update the selectedRows array
+        Alpine.store("selectedRows", selectedRowIds.length);
+      }
+      //   // Alpine.js function to select all rows
+      //   function selectAllRows() {
+      //     const checkboxes = document.querySelectorAll(".form-checkbox");
+      //     const selectedRowIds = Array.from(checkboxes).map((checkbox, index) => {
+      //       checkbox.checked = true; // Select all checkboxes
+      //       return index + 1;
+      //     });
+      //     // Update the selectedRows array
+      //     Alpine.store("selectedRows", selectedRowIds.length);
+      //   }
+
+      // Initialize products and render the table
+      const products = generateDummyData();
+      const currentPage = 1;
+      const itemsPerPage = 10;
+      fetch('./assets/data/products.json') // Adjust the path to your actual JSON file
+    .then(response => response.json())
+    .then(jsonData => {
+      renderProducts(jsonData, 1, 10); // Assuming you want to display the first page with 10 items
+      Alpine.store("products",jsonData);
+    })
+    .catch(error => {
+      console.error('Error fetching JSON data:', error);
+    });
+    </script>
+  </body>
+</html>
