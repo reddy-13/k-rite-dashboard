@@ -18,7 +18,7 @@
       <!-- Sidebar -->
       <aside
         x-data
-        x-show="$store.sidebarOpen = !$store.sidebarOpen"
+        x-show="$store.sidebarOpen = $store.sidebarOpen"
         class="sm:block w-64 flex flex-col justify-between bg-white border rounded-md ml-5 border-gray-300 p-4 mt-8 space-y-2 transition-all duration-300 ease-in-out"
       >
         <!-- Company Header -->
@@ -446,7 +446,7 @@
             <div class="flex items-center">
               <button
                 x-data
-                @click="$store.sidebarOpen = $store.sidebarOpen"
+                @click="$store.sidebarOpen =!$store.sidebarOpen"
                 class="block text-gray-600 focus:outline-none"
               >
                 <i class="fas fa-bars"></i>
@@ -561,12 +561,12 @@
                       @click="toggleSelectAllRows"
                     />
                   </th>
-                  <th class="py-2 px-4 border-b">Brand</th>
-                  <th class="py-2 px-4 border-b">Description</th>
-                  <th class="py-2 px-4 border-b">Members</th>
-                  <th class="py-2 px-4 border-b">Category</th>
-                  <th class="py-2 px-4 border-b">Tags</th>
-                  <th class="py-2 px-4 border-b">Next Meeting</th>
+                  <th class="py-2 px-4 text-xs border-b">Brand</th>
+                  <th class="py-2 px-4 text-xs border-b">Description</th>
+                  <th class="py-2 px-4 text-xs border-b">Members</th>
+                  <th class="py-2 px-4 text-xs border-b">Category</th>
+                  <th class="py-2 px-4 text-xs border-b">Tags</th>
+                  <th class="py-2 px-4 text-xs border-b">Next Meeting</th>
                 </tr>
               </thead>
               <tbody id="productTableBody"></tbody>
@@ -710,11 +710,14 @@
             <img src="${
               product.logoLink
             }" alt="Brand Avatar" class="w-6 h-6 rounded-md mr-2">
-            <span class="font-semi-bold">${product.brand}</span>
+            <span class="font-bold text-xs">${product.brand}</span>
           </div>
         </td>
-        <td class="py-2 px-4 border">${product.description}</td>
-        <td class="py-2 px-4 border">
+        <td class="py-2 px-4 text-xs border">${product.description.substring(
+          0,
+          30
+        )}</td>
+        <td class="py-2 px-4 text-xs border">
           <div class="flex -space-x-1 rtl:space-x-reverse ">
             ${product.members
               .map(
@@ -727,20 +730,20 @@
         <td class="py-2 px-4 border">
           <span class="${randomColors.bgColor} ${
             randomColors.textColor
-          } py-1 px-2 rounded-md">${product.category}</span>
+          } py-1 px-2 text-xs rounded-md">${product.category}</span>
         </td>
         <td class="py-2 px-4 border">
           ${product.tags
             .map(
               (tag) =>
-                `<span class="bg-gray-200 text-gray-600 py-1 px-2 rounded-md mr-1">#${tag}</span>`
+                `<span class="bg-gray-200 text-gray-600 text-xs py-1 px-2 rounded-md mr-1">#${tag}</span>`
             )
             .join("")}
         </td>
         <td class="py-2 px-4 border">
           <span class="${randomColors.bgColor} ${
             randomColors.textColor
-          } py-1 px-2 rounded-md">${product.nextMeeting}</span>
+          } py-1 px-2 rounded-md text-xs">${product.nextMeeting}</span>
         </td>
       `;
           productTableBody.appendChild(row);
