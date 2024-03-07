@@ -382,8 +382,7 @@
                   name="search"
                   id="search"
                   placeholder="Search for..."
-                  className="text-base bg-transparent w-full text-white
-                focus:outline-none "
+                  class="text-base bg-transparent w-full text-gray-500 focus:outline-none"
                 />
               </div>
               <button
@@ -415,10 +414,22 @@
                 </button>
               </div>
               <button
-                class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
-              >
-                <i class="fas fa-tags"></i> All Brands
-              </button>
+            class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300 relative"
+            x-data="{ open: true }"
+          >
+        <i class="fas fa-tags"></i> All Brands
+        <ul
+          x-show="open"
+          x-cloak
+          @click.away="open = !open"
+          class="absolute left-0 mt-2 bg-white border rounded-md shadow-md divide-y divide-gray-200"
+        >
+          <!-- Replace this list with your dynamic brand data -->
+          <li class="px-4 py-2 cursor-pointer">Brand 1</li>
+          <li class="px-4 py-2 cursor-pointer">Brand 2</li>
+          <li class="px-4 py-2 cursor-pointer">Brand 3</li>
+        </ul>
+      </button>
               <button
                 class="bg-white text-gray-600 py-1 px-2 rounded-md text-sm border border-gray-300"
               >
@@ -653,7 +664,7 @@
     .then(response => response.json())
     .then(jsonData => {
       renderProducts(jsonData, 1, 10); // Assuming you want to display the first page with 10 items
-      Alpine.store("products",jsonData);
+      // Alpine.store("products",jsonData);
     })
     .catch(error => {
       console.error('Error fetching JSON data:', error);
