@@ -472,24 +472,7 @@
               </thead>
               <tbody id="productTableBody"></tbody>
             </table>
-            <!-- Pagination -->
-            <div class="mt-4 flex items-center justify-between">
-              <button
-                x-data
-                @click="$store.currentPage > 1 ? $store.currentPage-- : null"
-                class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md focus:outline-none"
-              >
-                Previous
-              </button>
-              <div class="text-gray-600">Page <span x-text="currentPage"></span></div>
-              <button
-                x-data
-                @click="$store.currentPage < Math.ceil(products.length / $store.itemsPerPage) ? $store.currentPage++ : null"
-                class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md focus:outline-none"
-              >
-                Next
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
