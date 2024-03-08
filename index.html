@@ -702,6 +702,7 @@
           <input
             type="checkbox"
             class="form-checkbox"
+            data-rowid="${product.id}"
             @click="selectRow(${product.id})"
           />
         </td>
@@ -774,20 +775,18 @@
           ".form-checkbox:checked"
         );
         const selectedRowIds = Array.from(selectedRows).map((checkbox) =>
-          Number(checkbox.dataset.rowId)
+          Number(checkbox.dataset.rowid)
         );
 
         if (selectedRowIds.includes(id)) {
-          selectedRowIds.splice(selectedRowIds.indexOf(id), 1);
+          selectedRowIds.splice(selectedRowIds.indexOf(id), 0);
         } else {
           selectedRowIds.push(id);
+          console.log("selected rows", selectedRowIds);
         }
 
         // Update the selectedRows array
-        Alpine.store(
-          "selectedRows",
-          selectedRowIds.length > 0 ? selectedRowIds.length : 0
-        );
+        Alpine.store("selectedRows", selectedRowIds.length);
       }
 
       // Alpine.js function to select all rows
